@@ -4,17 +4,19 @@ import PropTypes from 'prop-types';
 
 export default class Contact extends Component {
 
-  state = {};
+  state = {
+    showContactInfo: true
+  };
 
   onShowClick = (e) =>{
-    console.log(console.log(e));
+    this.setState({ showContactInfo: false });
   }
 
   render() {
-      const {name, email, phone} = this.props.contact;
+      const { name, email, phone } = this.props.contact;
     return (
       <div className="card card-body mb-3">
-        <h4>{name}{'  '} 
+        <h4>{ name }{'  '} 
         <i onClick = {this.onShowClick.bind(this)} 
         className="fas fa-sort-down"/>
         </h4>
