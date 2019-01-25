@@ -30,11 +30,13 @@ export class Provider extends Component {
     
     
     render() {
-    return (
-      <div>
-        
-      </div>
+    return ( 
+        <Context.Provider value={this.state}>
+            {this.props.children}
+        </Context.Provider>
+      
     )
   }
 }
 
+export const Consumer = Context.Consumer;
