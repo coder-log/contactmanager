@@ -9,7 +9,7 @@ export default class Contact extends Component {
   };
   
   onDeleteClick = ()=> {
-    this.props.deleteClickHandler();
+    
   };
 
   render() {
@@ -42,6 +42,6 @@ export default class Contact extends Component {
 
 Contact.propTypes = {
   contact: PropTypes.object.isRequired,
-  deleteClickHandler: PropTypes.func.isRequired
+ 
 }
 
